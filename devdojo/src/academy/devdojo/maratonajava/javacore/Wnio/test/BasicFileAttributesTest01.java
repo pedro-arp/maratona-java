@@ -10,13 +10,14 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 
 public class BasicFileAttributesTest01 {
+    //BasicFileAttributesView, DosFileAttributesView, PosixFileAttributesView
     public static void main(String[] args) throws IOException {
         LocalDateTime date = LocalDateTime.now().minusDays(10);
         File file = new File("path/novo.txt");
         boolean isCreated = file.createNewFile();
         boolean isModified = file.setLastModified(date.toInstant(ZoneOffset.UTC).toEpochMilli());
 
-        final Path path = Paths.get("path/novo_path.txt");
+        final Path path = Paths.get("path/new.txt");
         Files.createFile(path);
         final FileTime fileTime = FileTime.from(date.toInstant(ZoneOffset.UTC));
         Files.setLastModifiedTime(path, fileTime);
