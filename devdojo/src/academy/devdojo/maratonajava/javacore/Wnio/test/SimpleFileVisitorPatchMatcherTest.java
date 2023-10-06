@@ -7,13 +7,12 @@ import java.nio.file.attribute.BasicFileAttributes;
 class ListFiles extends SimpleFileVisitor<Path> {
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
-        matches(file, "glob:**Test*");
+        matches(file);
         return FileVisitResult.CONTINUE;
     }
-    private static void matches(Path file, String glob) {
-        PathMatcher matcher = FileSystems.getDefault().getPathMatcher(glob);
-        if (matcher.matches(file) == true) {
-            //System.out.println(glob + ": " + matcher.matches(file));
+    private static void matches(Path file) {
+        PathMatcher matcher = FileSystems.getDefault().getPathMatcher("glob:**Test*");
+        if (matcher.matches(file)) {
             System.out.println(file.getFileName());
 
         }
