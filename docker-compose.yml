@@ -1,7 +1,7 @@
-version: '2.4'
+version: '8.0'
 services:
   db:
-    image: mysql
+    image: mysql:8.0
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
