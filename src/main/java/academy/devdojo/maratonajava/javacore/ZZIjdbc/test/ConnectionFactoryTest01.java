@@ -11,7 +11,12 @@ public class ConnectionFactoryTest01 {
         final Producer producerToUpdate = Producer.builder().id(6).name("Testing").build();
       //  ProducerService.save(producer);
       //  ProducerService.delete(1);
-        ProducerService.update(producerToUpdate);
-
+      //  ProducerService.update(producerToUpdate);
+      //  final List<Producer> producers = ProducerService.findAll();
+      // final List<Producer> producers = ProducerService.findByName("Tes");
+      //   log.info("Producers found'{}'", producers);
+      //  ProducerService.showProducerMetaData();
+      //  ProducerService.showDriverMetaData();
+        ProducerService.showTypeScrollWorking();
     }
 }
