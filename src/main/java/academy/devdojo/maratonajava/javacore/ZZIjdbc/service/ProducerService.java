@@ -29,13 +29,42 @@ public class ProducerService {
     }
 
     public static void showProducerMetaData() {
-         ProducerRepository.showProducerMetaData();
+        ProducerRepository.showProducerMetaData();
     }
+
     public static void showDriverMetaData() {
-         ProducerRepository.showDriverMetaData();
+        ProducerRepository.showDriverMetaData();
     }
+
     public static void showTypeScrollWorking() {
         ProducerRepository.showTypeSrollWorking();
+    }
+
+    public static List<Producer> findByNameAndUpdateToUpperCase(String name) {
+        return ProducerRepository.findByNameAndUpdateToUpperCase(name);
+
+    }
+
+    public static List<Producer> findByNameAndInsertWhenNotFound(String name) {
+        return ProducerRepository.findByNameAndInsertWhenNotFound(name);
+
+    }
+
+    public static void findByNameAndDelete(String name) {
+        ProducerRepository.findByNameAndDelete(name);
+
+    }
+
+    public static List<Producer> fingByNamePreparedStatemant(String name) {
+        return ProducerRepository.fingByNamePreparedStatemant(name);
+
+    }
+    public static void updatePreparedStatement(Producer producer) {
+        requireValidId(producer.getId());
+        ProducerRepository.updatePreparedStatement(producer);
+    }
+    public static List<Producer> findByNameCallableStatemant(String name) {
+        return ProducerRepository.findByNameCallableStatemant(name);
     }
 
     private static void requireValidId(Integer id) {
