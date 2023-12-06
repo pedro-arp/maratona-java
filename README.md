@@ -1,5 +1,5 @@
 # Maratona Java Virado No Jiraya - DevDojo Academy
-<b>Melhor, maior, e o mais completo curso de Java em português grátis de toda Internet está de volta. Maratona Java Virado No Jiraya. 
+<b>Melhor, maior, e o mais completo curso de Java em português grátis de toda Internet. Maratona Java Virado No Jiraya com William Suane. 
 
 A. Playlist do curso:</b>
 
